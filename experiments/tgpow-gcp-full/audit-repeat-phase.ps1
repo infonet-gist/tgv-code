@@ -1,6 +1,6 @@
 param([Parameter(Mandatory=$true)][ValidatePattern('^p(256|128|64)-r[23]$')][string]$Phase)
 $ErrorActionPreference='Stop'
-$env:GOCACHE='C:/Users/infonet/Desktop/git/02_worldland/WorldLand/artifacts/go-cache-windows'
+$env:GOCACHE=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../../artifacts/go-cache-windows'))
 $root="artifacts/tgpow-gcp-full/repeat-analysis/$Phase"
 $summaries=@(foreach($n in 1..6) {
  $out="$root/n$n"

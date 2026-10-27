@@ -18,7 +18,7 @@ $fingerprints = @{
 }
 $nodeName = "wl-tgpow6-0908-n$NodeNumber"
 $commonArgs = @('--zone=us-central1-b','--tunnel-through-iap',
- '--ssh-key-file=C:/Users/infonet/Desktop/git/02_worldland/WorldLand/artifacts/tgpow-gcp-testnet/ssh-key',
+ "--ssh-key-file=$([IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../../artifacts/tgpow-gcp-testnet/ssh-key')))",
  '--project=project-b705fc06-c245-4131-9fb','--account=smin8030@gmail.com','--quiet')
 switch ($Operation) {
  'run' { & $gc compute ssh $nodeName @commonArgs --ssh-flag=-batch --ssh-flag=-hostkey "--ssh-flag=$($fingerprints[$NodeNumber])" "--command=$RemoteCommand" }

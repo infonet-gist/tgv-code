@@ -1,6 +1,6 @@
 param([Parameter(Mandatory=$true)][ValidatePattern('^p(256|128|64)-r[23]$')][string]$Phase)
 $ErrorActionPreference='Stop'
-$env:GOCACHE='C:/Users/infonet/Desktop/git/02_worldland/WorldLand/artifacts/go-cache-windows'
+$env:GOCACHE=[IO.Path]::GetFullPath((Join-Path $PSScriptRoot '../../artifacts/go-cache-windows'))
 $dir="artifacts/tgpow-gcp-full/repeat-analysis/$Phase/n1/phase-public-$Phase-fixed64"
 $blocks=@(Get-Content "$dir/blocks.jsonl"|ConvertFrom-Json)
 $requests=@(go run ./experiments/tgpow-gcp-full/audit "$dir/registry-logs.json"|ConvertFrom-Json)
