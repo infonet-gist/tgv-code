@@ -1,6 +1,6 @@
-# TGPoW: TPM-Gated Proof of Work with Verifiable Coin Tosses
+# TGV: TPM-Gated Verifiable Coin Tossing
 
-TGPoW binds both consensus identity and work-input generation to one TPM trust
+TGV binds both consensus identity and work-input generation to one TPM trust
 root. WorldLand uses ECCPoW as its reference work puzzle: a VRF selects an
 eligible round, a non-exportable P-256 TPM work key signs the round context,
 and the signature-derived value becomes the ECCPoW input. Any independent
@@ -16,7 +16,7 @@ uses `DeriveConsensusIdentity`; `DeriveDID` is a compatibility alias.
 
 - `crypto/tpmwork`: TPM signing, MakeCredential/ActivateCredential, and
   TPM2_Certify support.
-- `consensus/VCT`: the WorldLand ECCPoW instantiation of TGPoW.
+- `consensus/VCT`: the WorldLand ECCPoW instantiation of TGV.
 - `contracts/tpmregistry`: registry contract, dynamic producer-slot hashes,
   Go client, evidence validation, and consensus-visible storage layout.
 - `cmd/tpmworkbench`: local TPM signing-throughput benchmark.

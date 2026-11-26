@@ -1,4 +1,4 @@
-# GCP five-node TGPoW experiment (2026-09-08)
+# GCP five-node TGV experiment (2026-09-08)
 
 User reported provider permission to proceed. Target: two genesis-enrolled
 nodes, three dynamically enrolled nodes, real GCP vTPMs, read-only explorer.

@@ -1,5 +1,5 @@
 // securityexperiment reproduces the VRF-distribution and ideal-ledger
-// experiments reported in the TGPoW paper. All pseudo-random simulations use
+// experiments reported in the TGV paper. All pseudo-random simulations use
 // a fixed seed; the VRF samples are produced by the implementation itself.
 package main
 

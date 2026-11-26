@@ -166,7 +166,7 @@ func Main() {
 	if err := agent.verifyNetwork(ctx); err != nil {
 		log.Fatal(err)
 	}
-	log.Printf("TGPoW producer %s started (policy %s)", agent.address, agent.policyHash)
+	log.Printf("TGV producer %s started (policy %s)", agent.address, agent.policyHash)
 	ticker := time.NewTicker(*poll)
 	defer ticker.Stop()
 	for {

@@ -192,7 +192,7 @@ func TestCreation(t *testing.T) {
 	}
 }
 
-// TestTGPoWForks verifies that the fork-ID handshake advertises each TGPoW
+// TestTGPoWForks verifies that the fork-ID handshake advertises each TGV
 // activation block in chronological order. The generic fork collector uses
 // reflection, so this test guards newly added ChainConfig fields from being
 // silently omitted or assigned a non-fork type/name.
@@ -210,10 +210,10 @@ func TestTGPoWForks(t *testing.T) {
 	atTPMGated := NewID(config, genesis, 30)
 
 	if atGenesis.Next != 10 || atVCT.Next != 20 || atRegistry.Next != 30 || atTPMGated.Next != 0 {
-		t.Fatalf("unexpected TGPoW fork sequence: genesis=%x vct=%x registry=%x gated=%x", atGenesis, atVCT, atRegistry, atTPMGated)
+		t.Fatalf("unexpected TGV fork sequence: genesis=%x vct=%x registry=%x gated=%x", atGenesis, atVCT, atRegistry, atTPMGated)
 	}
 	if atGenesis.Hash == atVCT.Hash || atVCT.Hash == atRegistry.Hash || atRegistry.Hash == atTPMGated.Hash {
-		t.Fatalf("TGPoW activation did not update fork checksum: genesis=%x vct=%x registry=%x gated=%x", atGenesis, atVCT, atRegistry, atTPMGated)
+		t.Fatalf("TGV activation did not update fork checksum: genesis=%x vct=%x registry=%x gated=%x", atGenesis, atVCT, atRegistry, atTPMGated)
 	}
 }
 

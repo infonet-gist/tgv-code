@@ -1,4 +1,4 @@
-# TGPoW WorldLand two-node client experiment
+# TGV WorldLand two-node client experiment
 
 This experiment runs the actual WorldLand client on two local nodes. The
 producer executes VRF eligibility, uses the persisted non-exportable Windows

@@ -1,4 +1,4 @@
-# TGPoW implementation corrections (2026-09-07)
+# TGV implementation corrections (2026-09-07)
 
 This change implements the existing paper's protocol invariants; it does not
 change the paper to accommodate client bugs. The source of the protocol is

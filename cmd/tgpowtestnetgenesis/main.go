@@ -165,7 +165,7 @@ func main() {
 	if err := writeJSON(*metadataOutput, &publicMetadata); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("wrote TGPoW test genesis for controller %s and DID %s\n", controller, did)
+	fmt.Printf("wrote TGV test genesis for controller %s and DID %s\n", controller, did)
 }
 
 func vctMinimumDifficulty() *big.Int {

@@ -1,4 +1,4 @@
-# TGPoW TPM-bound consensus identity registry
+# TGV TPM-bound consensus identity registry
 
 The preferred protocol is now the dynamic `t`-of-`n` block-producer slot path
 implemented by `beginProducerRegistration`, `publishProducerChallenge`,

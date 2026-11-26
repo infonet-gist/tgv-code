@@ -1,5 +1,5 @@
 // networkexperiment is a fixed-seed multi-node event emulator for the
-// partially synchronous mother-tree games used in the TGPoW security proof.
+// partially synchronous mother-tree games used in the TGV security proof.
 // It reports targeted persistence attacks and honest finalized-chain growth
 // under bounded propagation delay. It is not a replacement for a deployment
 // across independent physical hosts.
